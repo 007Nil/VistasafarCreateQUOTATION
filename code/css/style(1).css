@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900');
+body {
+}
+body,h1, h2, h3, h4, h5, h6 {
+}
+.modal .modal-dialog.modal-lg {
+    width: 800px;
+}
+.form-control, .select2-container .select2-selection {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn.loading {
+    position: relative;
+    overflow: hidden;
+}
+.btn.loading:before,.btn.loading:after {
+    content: '';
+    position: absolute;
+    right:0;
+    left:0;
+    top:0;
+    bottom:0;
+    height:100%;
+    width:100%;
+}
+.btn.loading:after {
+    background-image: url(assets/img/preloader.svg) !important;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+}
+.btn.loading:before {
+    background-color:rgba(0,0,0,0.5);
+}
+.btn.loading .btn-text {
+    visibility: hidden;
+}
+.page-sidebar .sidebar-menu .menu-items > li > a > .arrow {
+    font-family: "Font Awesome 5 Free";
+    line-height: inherit;
+}
+.page-sidebar .sidebar-menu .menu-items > li > a > .arrow:before {
+    font-family: inherit;
+    content: "\f0d9";
+    font-weight:inherit;
+}
+.profile-dropdown > a {
+    opacity:0.85;
+}
+[data-toggle-pin="sidebar"] > i:before {
+    content: "\f111";
+}
+.table thead {
+    background:#fff;
+}
+.table tbody tr td, .table thead tr th {
+    padding:.75rem;
+}
+.table thead tr th:first-child {
+    padding-left: .75rem !important;
+}
+.table tbody tr th {
+    border-bottom: 1px solid rgba(230, 230, 230, 0.7);
+    border-top: 0px;
+    padding:.75rem;
+    font-size: 13.5px;
+    color:#333;
+}
+.table tbody tr:last-child td, .table tbody tr:last-child th {
+    border-bottom: none;
+}
+
+.nav-tabs > li > a, .nav-tab-dropdown .cs-select .cs-placeholder, .table thead tr th {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+.fa-fw.text-muted {
+    opacity: 0.5;
+}
+.pointer {
+    cursor: pointer;
+    pointer-events: all;
+}
+@media only screen and (min-width: 768px) {
+    form .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    form .row [class*='col-']:first-child, form .row [class*='col-']:not(:first-child), form .row [class*='col-']:not(:last-child) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+.overlay {
+    background:#fff;
+}
+.result-item:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+}
+.page-sidebar .sidebar-menu .menu-items li.active > a {
+    font-weight: bold;
+}
+.page-sidebar .sidebar-menu .menu-items > li.active ul.sub-menu > li.active .icon-thumbnail {
+    background:rgba(255,255,255,0.2);
+}
+.page-link {
+    color: #999;
+    border: none;
+    background: none;
+}
+.page-link:hover {
+    background: none;
+    color:#444;
+}
+.page-item.active .page-link {
+    color: #000;
+    background: none;
+    font-weight: bold;
+}
+.table tbody tr td {
+    background-color:inherit;
+}
+.noty_theme__mint.noty_type__alert, .noty_theme__mint.noty_type__notification {
+    background-color: #fffcf1;
+    border-bottom: none;
+    color: #2F2F2F;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 5px;
+}
+.abbr-name {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+.card .card-header {
+    min-height: unset;
+}
+.card .card-header .card-title {
+    font-family: inherit;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.card .card-header .card-title {
+    font-size: 14px;
+}
+.timeline::before {
+    background: #eee;
+}
+.nav-tabs > li > a {
+    font-family: inherit;
+    font-size:14px;
+    text-transform: none;
+    letter-spacing: normal;
+    color:#777;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nav-tabs > li > a.active {
+    color:#000;
+}
+.form-group label:not(.error) {
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    color:#000;
+}
+.pg-icon{font-size: 13px;font-family: Arial, sans-serif;}
+.tooltip1 {
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip1 .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  left: -251px;
+  top: -24px;
+}
+
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+.one-four{width:20%;float:left;padding: 0 !important;flex:20%;}
+.both-pad{padding:20px;}
+.pagging_box{width:20px;text-align:center;float:left;color:#343a40;}
+.active_box{font-weight:700;}
+
+.timelinel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timelinel::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container1 {
+  padding: 5px 5px 5px 20px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container2 {
+  padding: 5px 20px 5px 5px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container1::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -17px;
+  background-color: white;
+  border: 5px solid #FF9F55;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.container2::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -9px;
+  background-color: white;
+  border: 5px solid #FF9F55;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 11px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 11px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.content1 {
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container1, .container2 {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container1::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+  .container2::before {
+  right: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}

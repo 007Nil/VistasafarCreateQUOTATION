@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style(1).css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="image/158483.jpeg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+
+
+  <div class="container container-fixed-lg">
+    <div>
+      <h4>SEND QUOTATION</h4>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-12" style="padding:0;">
+            <div class="bg-white" style="border:none;padding:15px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3" style="padding:0 5px;">
+                    <div class="form-group">
+                      <label>Number of nights and days <span style="color:red;">*</span></label>
+                      <select name="txtNight" required="" id="night_number" style="padding: 7px 12px;float:left;">
+                        <!-- Implement By JS -->
+                      </select>
+                      <input type="text" name="txtDay" value="4" id="day_number" class="form-control"
+                        style="margin-left:5%;width:45%;float:left;" readonly="">
+                    </div>
+                  </div>
+                  <div class="col-sm-5" style="padding:0 5px 0 10px;">
+                    <div class="form-group">
+                      <label>Vehicle type <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <input type="text" name="txtVehicle" id="txtVehicle" placeholder="01 Innova/Xylo Or SImilar"
+                        class="form-control" style="margin-right:3%;width:70%;float:left;" required=""
+                        autocomplete="off">
+                      <select name="txtType" id="txtType" style="width:25%;float:left;padding: 7px 12px;" required="">
+                        <option value="">Select...</option>
+                        <option value="A/C">A/C</option>
+                        <option value="Non A/C" selected="">Non A/C</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding:0 5px;">
+                    <div class="form-group">
+                      <label>Tour start city <span style="color:red;">*</span></label>
+                      <input type="text" class="form-control" name="txtStartCity" id="txtStartCity"
+                        placeholder="IXB Airport/ NJP Railway Station /SIliguri Bus Station" required=""
+                        autocomplete="off">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12" style="padding:0 5px;">
+                    <div class="form-group">
+                      <label>Inclusion <span style="color:red;">*</span></label>
+                      <div class="form-check complete" id="inclusion_n" style="margin:0px;">
+                        <input type="checkbox" name="txtInclusion[]" id="inc1" class="inclusion_chk"
+                          value="Accommodation" checked="">
+                        <label for="inc1" style="margin:0 20px 5px 0;">Accommodation</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc2" class="inclusion_chk"
+                          value="Candle light dinner">
+                        <label for="inc2" style="margin:0 20px 5px 0;">Candle light dinner</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc3" class="inclusion_chk" value="Sightseeing"
+                          checked="">
+                        <label for="inc3" style="margin:0 20px 5px 0;">Sightseeing</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc4" class="inclusion_chk" value="Meals">
+                        <label for="inc4" style="margin:0 20px 5px 0;">Meals</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc5" class="inclusion_chk" value="Flight">
+                        <label for="inc5" style="margin:0 20px 5px 0;">Flight</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc6" class="inclusion_chk" value="Train">
+                        <label for="inc6" style="margin:0 20px 5px 0;">Train</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc7" class="inclusion_chk" value="Visa">
+                        <label for="inc7" style="margin:0 20px 5px 0;">Visa</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc8" class="inclusion_chk"
+                          value="Honeymoon cake">
+                        <label for="inc8" style="margin:0 20px 5px 0;">Honeymoon cake</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc9" class="inclusion_chk"
+                          value="Pickup and Drop (Airport/Railway Station/Bus Stands)" checked="">
+                        <label for="inc9" style="margin:0 20px 5px 0;">Pickup and Drop (Airport/Railway Station/Bus
+                          Stands)</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc10" class="inclusion_chk"
+                          value="Flower bed decoration">
+                        <label for="inc10" style="margin:0 20px 5px 0;">Flower bed decoration</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inc11" class="inclusion_chk"
+                          value="Welcome Drink on Arrival">
+                        <label for="inc11" style="margin:0 20px 5px 0;">Welcome Drink on Arrival</label>
+                        <input type="checkbox" name="txtInclusion[]" id="inco" class="inclusion_chk"
+                          value="Other Inclusions" onclick="">
+                        <label for="inco" style="margin:0 0 5px 0;">Other Inclusions</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12" id="flight" style="display:none;padding:0 5px;">
+                    <div class="form-group">
+                      <textarea name="txtFlight" id="txtFlight" class="form-control"
+                        placeholder="Flight Description"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12" id="other" style="display:none;padding:0 5px;">
+                    <div class="form-group">
+                      <textarea name="txtOther" id="txtOther" class="form-control"
+                        placeholder="Other Inclusions"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" style="padding:0 5px;width:13%;">
+                    <div class="form-group">
+                      <label>Adults <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <select name="txtAdult" id="txtAdult" style="padding: 7px 12px;width:90%;" required="">
+                        <!-- Implemented By JS -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" style="padding:0 5px;width:13%;">
+                    <div class="form-group">
+                      <label>Kids <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <select name="txtChild" id="txtChild" style="padding: 7px 12px;width:90%;" required="">
+                        <!-- Implemented By JS -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" style="padding:0 5px;width:13%;">
+                    <div class="form-group">
+                      <label>Rooms <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <select name="txtRooms" id="txtRooms" style="padding: 7px 12px;width:90%;" required="">
+                        <!-- Implemented By JS -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" style="padding:0 5px;width:13%;">
+                    <div class="form-group">
+                      <label>Extra bed</label>
+                      <div style="clear:both;"></div>
+                      <select name="txtBed" id="txtBed" style="padding: 7px 12px;width:90%;">
+                        <!-- Implemented By JS -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-2" style="padding:0 5px;">
+                    <div class="form-group">
+                      <label>Tour start date <span style="color:red;">*</span></label>
+                      <div class="input-group">
+                        <input type="date" name="txtStartDate" id="txtStartDate" value="" onchange="tour_start_date();"
+                          class="form-control span2 readonly numeric_date hasDatepicker" required="" autocomplete="off">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2 m-b" style="padding:0 5px;width: 18%;">
+                    <div class="form-group">
+                      <label>Advance payment(%) <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <select style="padding: 7px 12px;width:90%;" name="txtAdPrice" id="txtAdPrice">
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div class="col-sm-12" style="padding:0 5px;">
+                    <!-- <p>Previous package cost: <i class="fa fa-inr"></i>33000</p> -->
+                  </div>
+                  <div class="col-sm-2 m-b" style="padding:0;max-width:29%;">
+                    <div class="form-group">
+                      <label class="te-label" style="padding-left: 5px;">Total cost</label>
+                      <span style="color:red;">*</span></label>
+                      <div style="clear:both;"></div>
+                      <div style="width:3%;float:left;margin-top:3px;text-align:right;color:#E6533C;">
+                        <i class="fa fa-inr" style="font-size:11px;"></i>
+                      </div>
+                      <input type="text" class="form-control" name="txtTotalCost" id="txtTotalCost" value=""
+                        style="width:80%;float:left;padding: 6px 0px;color:#E6533C;" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12" style="padding-top: 25px;">
+        <h4>Hotel Information</h4>
+      </div>
+      <div class="col-lg-12" style="padding:0;">
+        <div class=" bg-white" style="border:none;padding:0 15px;">
+          <div class="card-body" id="day_info_details">
+
+
+
+          </div>
+          <span id="add_city_per_night"
+            style="cursor: pointer; color: rgb(98, 84, 178); font-weight: bold; padding: 10px; font-size: 13px;"
+            onclick="add_city_per_night();"><i class="fa fa-lg fa-plus-circle text-danger"></i> Add Destination</span>
+
+
+        </div>
+      </div>
+      <input type="hidden" id="totalNight" value="4">
+      <div class="col-lg-12">&nbsp;</div>
+
+      <div class="col-md-12">
+        <h4>Day Information</h4>
+      </div>
+
+
+      <div class="col-lg-12" style="padding:0;">
+        <div class=" bg-white" style="border:none;padding:15px;" id="day_information_div">
+        </div>
+      </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <button id="submit_PDF" class="btn btn-success btn-block" style="float:right; height: 50px;">
+      <p style="text-align: center; color: black; font-weight: bold;
+      ">GENERATE PDF</p>
+    </button>
+    <div style="height: 100px;"></div>
+
+
+    <div class="footer">
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2)">
+        <p style="float: left;">© 2020 Copyright:</p>
+        <a class="text-dark" style="float: left;" href="https://vistasafar.com/">vistasafa</a>
+        <p style="float: inline-end; padding-left: 800px;">Developed By : Sagnik Sarkar</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script> -->
+    <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
