@@ -535,65 +535,134 @@ $("#submit_PDF").on("click", function () {
   // 
   doc.setFontSize(15);
   doc.setTextColor(100);
-  doc.text("Greetings from vistasafar.com!",5,210);
-  doc.setTextColor(0,0,0);
-  doc.text("VISTASAFAR LLP",5,220);
+  doc.text("Greetings from vistasafar.com!", 5, 210);
+  doc.setTextColor(0, 0, 0);
+  doc.text("VISTASAFAR LLP", 5, 220);
   doc.setTextColor(100);
-  doc.text(", designed below holiday package for your requested trip, if you need",48,220);
-  doc.text("any modifications in travel package you can contact VISTASAFAR LLP on 7908838025",5,230);
-  doc.text(" keep your Trip ID: 5734544059 as a reference while contacting with executive.",5,240);
+  doc.text(", designed below holiday package for your requested trip, if you need", 48, 220);
+  doc.text("any modifications in travel package you can contact VISTASAFAR LLP on 7908838025", 5, 230);
+  doc.text(" keep your Trip ID: 5734544059 as a reference while contacting with executive.", 5, 240);
 
   doc.line(5, 250, 205, 250);
-  
+
 
   // Total Amount
   doc.setFontSize(16);
-  doc.setTextColor(0,0,0);
+  doc.setTextColor(0, 0, 0);
   doc.setFont("helvetica", "bold");
-  doc.text("Total Booking Amount:",5,260);
+  doc.text("Total Booking Amount:", 5, 260);
   doc.line(5, 270, 130, 270);
   doc.setFont("courier", "normal");
-  doc.setTextColor(100,220,108);
+  doc.setTextColor(100, 220, 108);
   // doc.text(total_cost,120,260);
-  
-  doc.text("Rs.30000",140,260);
+
+  doc.text("Rs.30000", 140, 260);
   doc.line(140, 270, 205, 270);
 
   // Advance Amount
   // advance_price
-  let advance_price = ( advance_price_persent/ 100) * 30000;
+  let advance_price = (advance_price_persent / 100) * 30000;
   // console.log(advance_price)
 
   doc.setFontSize(16);
-  doc.setTextColor(0,0,0);
+  doc.setTextColor(0, 0, 0);
   doc.setFont("helvetica", "bold");
-  doc.text("Advance Amount to Pay for Trip Confirmation:",5,280);
+  doc.text("Advance Amount to Pay for Trip Confirmation:", 5, 280);
   doc.line(5, 290, 130, 290);
   doc.setFont("courier", "normal");
-  doc.setTextColor(100,220,108);
-  doc.text("Rs."+advance_price.toString(),140,280);
+  doc.setTextColor(100, 220, 108);
+  doc.text("Rs." + advance_price.toString(), 140, 280);
   doc.line(140, 290, 205, 290);
 
   // 2nd Page
-  doc.addPage("a4","portrait");
+  doc.addPage("a4", "portrait");
   // Summary
   doc.setFontSize(16);
-  doc.setTextColor(242,70,70);
+  doc.setTextColor(242, 70, 70);
   doc.setFont("courier", "normal");
-  doc.text("Summary:",5,10);
+  doc.text("Summary:", 5, 10);
   doc.setDrawColor(255, 0, 0); // draw red lines
   doc.setLineWidth(0.1);
   doc.line(5, 12, 32, 12); // horizontal line
 
 
+  doc.setFontSize(16);
+  doc.setDrawColor(100);
+  // doc.setLineDash([1, 1.5, 1, 1.5, 1, 1.5, 3, 2, 3, 2, 3, 2], 7.5);
+  doc.setDrawColor(88, 77, 77);
+  doc.line(5, 25, 60, 25);
+  doc.setTextColor(0, 0, 0);
+  doc.text("Tour Duration:", 8, 36);
+  doc.line(5, 45, 60, 45);
+
+  // 
+  doc.line(64, 25, 125, 25);
+  doc.setTextColor(100);
+  doc.text(night_number + " Nights & " + day_number + " Days", 64, 36)
+  doc.line(64, 45, 125, 45);
+
+  doc.setTextColor(0, 0, 0);
+  doc.text("Tour Start Date:",8,56);
+  doc.line(5, 63, 60, 63);
+
+  doc.setTextColor(100);
+  doc.text(tour_start_date, 64, 56);
+  doc.line(64, 63, 125, 63);
+
+  doc.setTextColor(0, 0, 0);
+  doc.text("Tour Start City:",8,76);
+  doc.line(5, 84, 60, 84);
+
+  doc.setTextColor(100);
+  doc.text(tour_start_city,64, 76);
+  doc.line(64, 84, 125, 84);
+
+  doc.line(140, 25, 165, 25);
+  doc.setTextColor(0, 0, 0);
+  doc.text("Adults:",140,36);
+  doc.line(140, 45, 165, 45);
+
+  doc.setTextColor(100);
+  doc.line(170, 25, 195, 25);
+  doc.text(adult_number,180,36);
+  doc.line(170, 45, 195, 45);
+
+  doc.setTextColor(0, 0, 0);
+  doc.text("Kids:",140,56);
+  doc.line(140, 63, 165, 63);
+
+  doc.setTextColor(100);
+  doc.line(170, 25, 195, 25);
+  doc.text(kid_number,180,56);
+  doc.line(170, 63, 195, 63);
+
+
+  // inclusion.forEach(element => {
+  //   doc.text(element.value,6,65)
+  // });
+
+  for (let index = 0; index < inclusion.length; index++) {
+    console.log(inclusion[index].value)
+    if (index == 0){
+    doc.text(inclusion[index].value,6,88+12);
+    }else if (index == 1){
+      doc.text(inclusion[index].value,6,88+24);
+    }
+    else{
+      doc.text(inclusion[index].value,6,88+(index+1)*12);
+    }
+    
+  }
 
 
 
 
 
-  // window.open(doc.output('bloburl'), '_blank')
-  // doc.autoPrint();
-  doc.save();
+
+
+  window.open(doc.output('bloburl'), '_blank')
+  doc.autoPrint();
+  // doc.save();
 
 
 
